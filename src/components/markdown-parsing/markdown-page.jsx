@@ -4,16 +4,16 @@ import Markdown from "./content.md";
 
 export default class MarkdownPage extends Component {
   constructor(props) {
-    super(props)
-    this.state = { markdown: "" }
+    super(props);
+    this.state = { markdown: "" };
   }
 
   componentDidMount() {
     fetch(Markdown)
       .then((resp) => resp.text())
-      .then((text) => this.setState({ markdown: text }))
+      .then((text) => this.setState({ markdown: text }));
   }
-  render(){
+  render() {
     // console.log(process.env.NODE_ENV);
     return (
       <div className="row">
@@ -21,6 +21,6 @@ export default class MarkdownPage extends Component {
           <ReactMarkdown children={this.state.markdown} linkTarget={"_blank"} />
         </div>
       </div>
-    )
+    );
   }
 }

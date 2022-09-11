@@ -24,11 +24,10 @@ function TodosForm() {
         <input
           type={"text"}
           value={name}
-          onChange={(e) => setName(e.target.value)} />
+          onChange={(e) => setName(e.target.value)}
+        />
       </form>
-      {todos.length === 0 && (
-        <h4>No Todos!</h4>
-      )}
+      {todos.length === 0 && <h4>No Todos!</h4>}
       {todos.map((todo) => {
         return <Todo key={todo.id} dispatch={dispatch} todo={todo} />;
       })}

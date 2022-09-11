@@ -17,7 +17,8 @@ export default function Todo({ todo, dispatch }) {
             type: TODO_ACTIONS.TOGGLE,
             payload: { id: todo.id },
           })
-        }>
+        }
+      >
         Toggle
       </button>
       <button
@@ -26,7 +27,8 @@ export default function Todo({ todo, dispatch }) {
             type: TODO_ACTIONS.DELETE,
             payload: { id: todo.id },
           })
-        }>
+        }
+      >
         Delete
       </button>
     </div>
